@@ -1,0 +1,366 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#3498db;
+    --secondary-color:#2c3e50;
+    --background-color:#f4f4f4;
+    --text-color:#333333;
+    --main-font:Arial,sans-serif;
+}
+body {
+    font-family: var(--main-font);
+    color:var(--text-color);
+    line-height: 1.6;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: 1.05;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.main-header {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+h2 {
+    color: white;
+}
+h2 span {
+    color: yellow;
+}
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+.main-header a {
+    color: white;
+    text-decoration: none;
+}
+.hero {
+    min-height: 80vh;
+    background: linear-gradient(135deg , #3498db , #8e44ad);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+    animation: fadeIn 2s ease;
+}
+.parent .card1 {
+    width: 400px;
+    height: 300px;
+    background-image:url(Design.jpg);
+    padding: 10px;
+}
+.hero p {
+    font-size: 18px;
+}
+.hero-bth {
+    background-color: white;
+    color: var(--secondary-color);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+.main-header a {
+    transition: 0.3s;
+}
+.main-header:hover {
+    color: #3498db;
+}
+.hero-btn:focus {
+    background-color: lightblue;
+    color: black;
+}
+.courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+.courses h2 {
+    margin-bottom: 30px;
+}
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    padding-bottom: 25px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.3s;
+    color:black;
+}
+.card-image1 {
+    width: 100%;
+    height: 150px;
+    background-image: url(./images/web\ development.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card-image2 {
+    width: 100%;
+    height: 150px;
+    background-image: url(./images/Design.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card-image3 {
+    width: 100%;
+    height: 150px;
+    background-image: url(./images/javascript.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.hero h1 {
+    font-size: 38px;
+}
+.cards-container {
+    justify-content: center;
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:column;
+    gap:15px;   
+}
+.main-header ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 30px;
+}
+.hero p {
+    font-size: 16px;
+}
+.card {
+    width: 100%;
+    max-width: 250px;
+}
+@media screen and (max-width:992px) {
+    .blog-container {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+@media  screen and (max-width:768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+}
+.about-page {
+    padding: 40px 20px;
+    text-align: center;
+}
+.about-page h1 {
+    margin-bottom: 30px;
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.team-card {
+    background-color: #f4f4f4;
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.3s;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+}
+.team-card h2 {
+    margin-bottom: 10px;
+    color: rgb(139, 37, 37);
+}
+.login-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000020;
+}
+.login-form h1 {
+    text-align: center;
+    margin-bottom:10px ;
+}
+.login-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.login-form input:focus {
+    outline: 2px solid ;
+}
+.login-form button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-form button:hover {
+    background-color: var(--secondary-color);
+}
+.login-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--main-font);
+}
+.login-form textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+.blog-card h2 {
+    color: rgb(244, 8, 8);
+}
+@keyframes slidedown {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUP {
+    form {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIN {
+    form {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: translate(1);
+        opacity: 1;
+    }
+}
+.main-header {
+    animation: slidedown 0.8s ease-out both;
+}
+.hero h1 {
+    animation: slideUP 1s ease-out 0.3 both;
+}
+.hero p {
+    animation: slideUP 1s ease-out 0.6s both;
+}
+.hero-btn {
+    animation: zoomIN 0.8s ease-out 0.9s both;
+}
+.card {
+    animation: slideUP 0.8s ease-out both;
+}
+.card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.greenblue {
+    background: linear-gradient(green , blue);
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.redorange {
+    background: linear-gradient(red , orange);
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.bluewhite {
+    background: linear-gradient(blue , white);
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.redwhite {
+    background: linear-gradient(red , white);
+}
+.yellowwhite {
+    background: linear-gradient(rgb(5, 240, 32) , white);
+}
+.brownwhite {
+    background: linear-gradient(brown , white);
+}
